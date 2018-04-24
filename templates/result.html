@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<body>
+<form action="/redirect" method="POST">
+<h1>DETAILS</h1>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Branch</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>District</th>
+        <th>State</th>
+    </tr>
+    <tr  >
+    <td >{{df[0].to_string(index=False)}}</td>
+
+    <td>{{df[1].to_string(index=False)}}</td>
+
+    <td >{{df[2].to_string(index=False)}}</td>
+
+    <td >{{df[3].to_string(index=False)}}</td>
+
+    <td>{{df[4].to_string(index=False)}}</td>
+
+    <td>{{df[5].to_string(index=False)}}</td>
+
+    <td>{{df[6].to_string(index=False)}}</td>
+
+    </tr>
+</table>
+    <br/>
+<input type="submit" value="Search Another">
+</form>
+</body>
+</html>

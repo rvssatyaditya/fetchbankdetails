@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/redirect_branch" method="POST" >
+<h1>BRANCH DETAILS</h1>
+<table border="1"  >
+    <tr>
+        <th >SNO.</th>
+        <th >Branches</th>
+    </tr>
+    {% for k,v in df1.iterrows() %}
+    <tr >
+    <td>{{k}}</td>
+    <td>{{v.to_string(index=False)}}</td>
+    </tr>
+    {%endfor%}
+</table>
+    <br/>
+<input type="submit" value="Search Another">
+</form>
+</body>
+</html>
