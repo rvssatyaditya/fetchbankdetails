@@ -22,4 +22,13 @@ six==1.11.0
 urllib3==1.22
 virtualenv==15.2.0
 virtualenv-clone==0.3.0
+click==6.7
+Flask==0.12.2
+Flask-SQLAlchemy==2.3.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+psycopg2==2.7.4
+SQLAlchemy==1.2.3
+Werkzeug==0.14.1
 gunicorn==19.6.0
