@@ -5,7 +5,7 @@ import pandas as pd
 
 app = Flask(__name__)
 # Initializing Database String
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://bankrestapi:123@localhost/bankrestapi'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://nsarxvzrrmicmd:848311b84ec42eaf06fe89980df19a51f2f3d2ee6bd9927e12b1d27311294b69@ec2-54-235-109-37.compute-1.amazonaws.com:5432/d5601tgvtb75is'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # db contains flask object
 db = SQLAlchemy(app)
@@ -61,7 +61,7 @@ def init():
 @app.route('/Query', methods=['POST', 'GET'])
 def home():
     pd.set_option('display.max_colwidth', -1)
-    conn = psycopg2.connect('postgresql://lonewolf:123@localhost/bankrestapi')
+    conn = psycopg2.connect('postgres://nsarxvzrrmicmd:848311b84ec42eaf06fe89980df19a51f2f3d2ee6bd9927e12b1d27311294b69@ec2-54-235-109-37.compute-1.amazonaws.com:5432/d5601tgvtb75is')
     c = conn.cursor()
     if request.method == "POST":
         text = request.form['text']
@@ -91,7 +91,7 @@ def redirect():
 @app.route('/Query_branch', methods=['POST', 'GET'])
 def query_branch():
     if request.method == 'POST':
-        conn = psycopg2.connect('postgresql://lonewolf:123@localhost/bankrestapi')
+        conn = psycopg2.connect('postgres://nsarxvzrrmicmd:848311b84ec42eaf06fe89980df19a51f2f3d2ee6bd9927e12b1d27311294b69@ec2-54-235-109-37.compute-1.amazonaws.com:5432/d5601tgvtb75is')
         c = conn.cursor()
         bank_name = request.form['bn']
         city = request.form['city']
